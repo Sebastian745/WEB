@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CalculadoraAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <div class="calculadora">
+    <input type="text" [(ngModel)]="display" disabled>
+  
+    <div class="botones">
+      <!-- Fila 1: Botones numéricos y de operación -->
+      <button (click)="clear()">C</button>
+      <button (click)="addToDisplay('(')">(</button>
+      <button (click)="addToDisplay(')')">)</button>
+      <button (click)="addToDisplay('/')">/</button>
+      
+      <!-- Fila 2: Botones numéricos y de operación -->
+      <button (click)="addToDisplay('7')">7</button>
+      <button (click)="addToDisplay('8')">8</button>
+      <button (click)="addToDisplay('9')">9</button>
+      <button (click)="addToDisplay('*')">*</button>
+      
+      <!-- Fila 3: Botones numéricos y de operación -->
+      <button (click)="addToDisplay('4')">4</button>
+      <button (click)="addToDisplay('5')">5</button>
+      <button (click)="addToDisplay('6')">6</button>
+      <button (click)="addToDisplay('-')">-</button>
+      
+      <!-- Fila 4: Botones numéricos y de operación -->
+      <button (click)="addToDisplay('1')">1</button>
+      <button (click)="addToDisplay('2')">2</button>
+      <button (click)="addToDisplay('3')">3</button>
+      <button (click)="addToDisplay('+')">+</button>
+      
+      <!-- Fila 5: Botones de cero, punto decimal, y calcular -->
+      <button class="zero" (click)="addToDisplay('0')">0</button>
+      <button (click)="addToDisplay('.')">.</button>
+      <button (click)="calculate()">=</button>
+    </div>
+  </div>
+  
+</body>
+</html>
+
