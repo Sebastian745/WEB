@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white; 
+    font-family: Arial, sans-serif;
+}
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #afafaf;
+    border: 2px solid #000000;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #06f141;
+}
+
+.winner {
+    background-color: #90ee90; 
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+.scores {
+    margin-top: 20px;
+    margin-left: 20px; /* Añade margen a la izquierda para moverlo más a la derecha */
+    padding: 10px; /* Añade un poco de espacio interno */
+    background-color: #f0f0f0; /* Color de fondo */
+    border: 2px solid #000; /* Bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Asegura que el contenedor se ajuste al tamaño del contenido */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.scores p {
+    margin: 5px 0;
+}
+
+.cell img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho de la celda */
+    height: 100%; /* Asegura que la imagen ocupe el 100% del alto de la celda */
+    object-fit: contain; /* Esto mantiene las proporciones de la imagen sin distorsionarla */
+    display: block; /* Elimina espacios blancos alrededor de la imagen */
+}
